@@ -23,5 +23,10 @@ pipeline {
                   }
               }
          }
+         stage('Check Website is available') {
+              steps {
+                  sh 'curl http://fancy-static-website-in-aws.s3-website.us-west-2.amazonaws.com/'
+              }
+         }
      }
 }
